@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>MongoDB Test</title>
+        <style>
+            table, th, td {
+               border: 1px solid black;
+               border-spacing: 0px;
+            }
+            th, td {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>EMAil</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="scale : ${scaleList}">
+                    <td th:text="${scale.email}"></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+
+        <h2>Add Scale</h2>
+        <form action="/addScale" method="POST">
+            Email <input type="text" id="email" name="email" /><br />
+            <h3>1. 정서적 교감보다는 육체적 교감을 하는 것이 좋다.</h3>
+            <ul>
+            	<li>
+            		<label><input type="radio" name="questions[]" value="likert">1</label>
+            	</li>
+            	<li>
+            		<label><input type="radio" name="questions[]" value="likert">2</label>
+            	</li>
+            	<li>
+            		<label><input type="radio" name="questions[]" value="likert">3</label>
+            	</li>
+            	<li>
+            		<label><input type="radio" name="questions[]" value="likert">4</label>
+            	</li>
+            	<li>
+            		<label><input type="radio" name="questions[]" value="likert">5</label>
+            	</li>
+            </ul>
+            <input type="submit" />
+        </form>
+    </body>
+</html>
