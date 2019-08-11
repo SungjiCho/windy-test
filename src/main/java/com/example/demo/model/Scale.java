@@ -13,7 +13,10 @@ public class Scale {
 	
 	
 	
-	public Scale() {}
+	public Scale() {
+		System.out.print("aaaaaaaa");
+		System.out.print("bbbbbbbb");
+	}
 	
 	public String get_id() {
 		return _id;
